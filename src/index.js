@@ -6,7 +6,7 @@ import "./styles.css";
 
 class Nav extends React.Component {
   state = {
-    navText: "init"
+    navText: "init1"
   };
   componentDidMount() {
     subscribe(this.updateState);
