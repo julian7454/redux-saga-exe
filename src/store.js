@@ -12,7 +12,12 @@ export const subscribe = cb => {
   callbacks.push(cb);
 };
 
-export const setState = state => {
-  store = state;
+export const dispatch = action => {
+  switch (action.type) {
+    case "UPDATE_NAV_TEXT":
+      store.navText = action.value;
+      break;
+    default:
+  }
   notifyAll();
 };

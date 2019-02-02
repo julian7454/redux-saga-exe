@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { setState } from "./store";
+import { setState, dispatch } from "./store";
 import Nav from "./nav";
 
 import "./styles.css";
@@ -15,8 +15,9 @@ class App extends React.Component {
         <button
           onClick={() => {
             //states.navText = 123
-            setState({
-              navText: Math.random()
+            dispatch({
+              type: "UPDATE_NAV_TEXT",
+              value: Math.random()
             });
           }}
         >
