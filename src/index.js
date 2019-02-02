@@ -1,23 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { subscribe, setState } from "./store";
+import { setState } from "./store";
+import Nav from "./nav";
 
 import "./styles.css";
-
-class Nav extends React.Component {
-  state = {
-    navText: "init1"
-  };
-  componentDidMount() {
-    subscribe(this.updateState);
-  }
-  updateState = store => {
-    this.setState(store);
-  };
-  render() {
-    return <div>{this.state.navText}</div>;
-  }
-}
 
 class App extends React.Component {
   render() {
