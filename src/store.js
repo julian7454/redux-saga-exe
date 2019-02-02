@@ -1,3 +1,5 @@
+import { UPDATE_NAV_TEXT } from "./actionTypes";
+
 const callbacks = [];
 let store = {
   navText: ""
@@ -14,7 +16,7 @@ export const subscribe = cb => {
 
 export const dispatch = action => {
   switch (action.type) {
-    case "UPDATE_NAV_TEXT":
+    case UPDATE_NAV_TEXT:
       store.navText = action.value;
       break;
     default:

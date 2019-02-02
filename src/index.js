@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { setState, dispatch } from "./store";
 import Nav from "./nav";
+import { UPDATE_NAV_TEXT } from "./actionTypes";
 
 import "./styles.css";
 
@@ -16,7 +17,7 @@ class App extends React.Component {
           onClick={() => {
             //states.navText = 123
             dispatch({
-              type: "UPDATE_NAV_TEXT",
+              type: UPDATE_NAV_TEXT,
               value: Math.random()
             });
           }}
