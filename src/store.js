@@ -15,11 +15,19 @@ export const subscribe = cb => {
 };
 
 export const dispatch = action => {
-  switch (action.type) {
-    case UPDATE_NAV_TEXT:
-      store.navText = action.value;
-      break;
-    default:
-  }
+  store = reducer(store, action);
   notifyAll();
 };
+
+function reducer(store, action) {
+  switch (action.type) {
+    case UPDATE_NAV_TEXT:
+      return {
+        ...store,
+        navText: action.value
+      };
+    default:
+      return store;
+  }
+  notifyAll();
+}
