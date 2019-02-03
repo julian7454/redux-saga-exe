@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
-import Nav from "./nav";
+import NavContainer from "./navContainer";
 import { updateNavText } from "./actions";
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Hello CodeSandbox</h1>
         <h2>Start editing to see some magic happen!</h2>
-        <Nav />
+        <NavContainer />
         <button
           onClick={() => {
             //states.navText = 123

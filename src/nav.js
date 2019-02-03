@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { subscribe } from "./store";
-import { connect } from "react-redux";
 
 class Nav extends React.Component {
   render() {
@@ -9,9 +7,4 @@ class Nav extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    navText: state.nav.navText
-  };
-};
-export default connect(mapStateToProps)(Nav);
+export default Nav;
