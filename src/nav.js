@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { subscribe } from "./store";
+import { connect } from "react-redux";
 
 class Nav extends React.Component {
   render() {
@@ -8,19 +9,9 @@ class Nav extends React.Component {
   }
 }
 
-function connect(Comp) {
-  class Wrapper extends React.Component {
-    componentDidMount() {
-      subscribe(this.updateState);
-    }
-    updateState = store => {
-      this.setState(store);
-    };
-    render() {
-      return <Comp {...this.state} />;
-    }
-  }
-  return Wrapper;
-}
-
-export default connect(Nav);
+const mapStateToProps = state => {
+  return {
+    navText: state.nav.navText
+  };
+};
+export default connect(mapStateToProps)(Nav);
