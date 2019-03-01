@@ -14,3 +14,6 @@ t_1~t_n。
 t_1, t_2…., t_n
 失敗的話：
 t_1, t_2…., t_n, c_n…, c_1
+
+## Redux Saga Tutorial | Simple Example | React Redux series Part 8Better Async with Redux Saga - Kushan Joshi, Mapbox
+https://www.youtube.com/watch?v=5j4JKtwdLt8
